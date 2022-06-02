@@ -114,3 +114,4 @@ while cash > 0:
         ev = input("Keep playing?")
     if ev == "n":
         cash = 0
+    print("Тут был Леха")
