@@ -28,14 +28,13 @@ class Deck:
         self.deck = []
         for rank in Card().cardRank:
             for suit in Card().cardSuit:
-                self.deck.append(f"{rank} {suit}")
+                self.deck.append(Card(rank, suit))
        # self.deck = Card().cardRank * Card().cardSuit
         random.shuffle(self.deck)
         
         
     def dealCard(self):
-        str = self.deck.pop(0).split(" ")
-        return Card(str[0], str[1])
+        return self.deck.pop(0)
         
 class Hand:
         
